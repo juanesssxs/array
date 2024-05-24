@@ -302,7 +302,7 @@ let libros = [
     peso: "1.3 libras"
 },
 {
-     itulo: "Bambi",
+    titulo: "Bambi",
     autor: "Felix Salten",
     genero: "Ficción",
     idioma: "Español",
@@ -354,8 +354,84 @@ let libros = [
 },
 ]
 
+const nuevoLibro ={
+    titulo:"Frozen: Una Aventura Congelada",
+    autor:"Walt Disney Company",
+    genero: "Ficción",
+    idioma: "Español",
+    precio: 9.99,
+    formato: "Tapa blanda",
+    isbn: "9788499514034",
+    descripcion: "La emocionante historia de Simba, un joven león que lucha por reclamar su lugar como el legítimo Rey León de la sabana africana.",
+    estado: "Nuevo",
+    ubicacion: "África",
+    fecha_publicacion: "Abril 1994",
+    editorial: "Libros Disney",
+    paginas: 48,
+    dimensiones: "8.3 x 0.2 x 11.6 pulgadas",
+    peso: "0.8 libras",
+}
 
-
+function mostrarMenu() {
+    console.log("Seleccione una opción:");
+    console.log("1. Mostrar la pila de libros");
+    console.log("2. Añadir un libro a la pila de libros");
+    console.log("3. Eliminar el último libro de la pila de libros");
+    console.log("4. Mostrar la longitud de la pila de libros");
+    console.log("5. Salir");
+    }
+  
+    function mostrarLibros(libros) {
+    console.table( libros);
+    }
+  
+    function añadirLibro(libros, libro) {
+    libros.push(libro);
+    console.log(`Libro añadido: ${libro.titulo}`);
+    }
+  
+    function quitarLibro(libros) {
+    const libroQuitado = libros.pop();
+    if (libroQuitado) {
+      console.log(`Libro eliminado: ${libroQuitado.titulo}`);
+    } else {
+      console.log("No hay libros quer eliminar.");
+    }
+    }
+  
+    function mostrarLongitud(libros) {
+    console.log(`Longitud del array: ${libros.length}`);
+    }
+  
+    let continuar = "si";
+  do {
+    mostrarMenu();
+    var opcion = prompt("Seleccione una opción:");
+    switch (opcion) {
+      case '1':
+        mostrarLibros(libros);
+        break;
+      case '2':
+        añadirLibro(libros, nuevoLibro);
+        break;
+      case '3':
+        quitarLibro(libros);
+        break;
+      case '4':
+        mostrarLongitud(libros);
+        break;
+      case '5':
+        continuar = "no";
+        console.log("Saliendo del programa...");
+        break;
+      default:
+        console.log("Opción no válida. Intente de nuevo.");
+        break;
+    }
+    if (continuar !== "no") {
+      continuar = prompt("Desea continuar (si/no)").toLowerCase();
+    }
+    } while (continuar === "si");
 
 
 
