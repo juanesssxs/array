@@ -159,7 +159,7 @@ let libros = [
     autor: "Felix Salten",
     genero: "Ficción",
     idioma: "Español",
-    precio: 11.99,
+    precio: 25.99,
     descuento:"20%",
     formato: "Tapa dura",
     isbn: "9781484721626",
@@ -215,7 +215,7 @@ let libros = [
     autor: "Walt Disney Company",
     genero: "Ficción",
     idioma: "Español",
-    precio: 13.99,
+    precio: 33.99,
     descuento:"20%",
     formato: "Tapa blanda",
     isbn: "9788499515151",
@@ -251,7 +251,7 @@ let libros = [
     autor: "Charles Perrault",
     genero: "Ficción",
     idioma: "Español",
-    precio: 10.99,
+    precio: 64.99,
     descuento:"20%",
     formato: "Tapa dura",
     isbn: "9780307591944",
@@ -269,7 +269,7 @@ let libros = [
     autor: "Walt Disney Company",
     genero: "Ficción",
     idioma: "Español",
-    precio: 11.99,
+    precio: 55.99,
     descuento:"20%",
     formato: "Tapa dura",
     isbn: "9788416917232",
@@ -323,7 +323,7 @@ let libros = [
     autor: "Felix Salten",
     genero: "Ficción",
     idioma: "Español",
-    precio: 10.99,
+    precio: 60.99,
     descuento:"20%",
     formato: "Tapa blanda",
     isbn: "9788499514284",
@@ -359,7 +359,7 @@ let libros = [
     autor: "Walt Disney Company",
     genero: "Ficción",
     idioma: "Español",
-    precio: 11.99,
+    precio: 40.99,
     descuento:"20%",
     formato: "Tapa blanda",
     isbn: "9788416917218",
@@ -552,7 +552,18 @@ const librosCarosTitulo = libros.filter((libro) => {
     })
     .sort((a,b) => b.precio - a.precio);
 
-    const librosPorNumeroMasAltoDePaginas = 
+    const librosPorNumeroMasAltoDePaginas = libros.filter((libro) => {
+      return libro.paginas > 0;
+    })
+      .map((libro) => {
+        return {
+            titulo: libro.titulo,
+            autor: libro.autor,
+            editorial: libro.editorial,
+            paginas: libro.paginas
+        }
+      })
+      .sort((a,b) => b.paginas - a.paginas)
 
 function mostrarMenu() {
     console.log("1. Mostrar la pila de libros");
@@ -563,7 +574,7 @@ function mostrarMenu() {
     console.log("6. Listar libros con descuento");
     console.log("7. Mostrar Resumenes");
     console.log("8. Salir");
-    }
+    };
   
     function mostrarLibros(libros) {
     console.table( libros);
@@ -590,7 +601,9 @@ function mostrarMenu() {
     let continuar = "si";
     
     function mostrarIteraciones() {
+      console.log(" Method .map y listar los libros por Titulo, Autor, Editorial y Precio")
       console.table(TITULO)
+      console.log("10 iteraciones diferentes manteniendo el atributo Titulo")
       console.table(TITULO1)
       console.table(TITULO2)
       console.table(TITULO3)
@@ -611,16 +624,25 @@ function mostrarMenu() {
 
     function mostrarResumenes() {
       console.log("Methods Filter")
+      console.log("Obtener un array con los libros que tengan un precio mayor a 50 dolares")
       console.table(librosPrecioMayor)
+      console.log("resumen de libros por numero mas alto de paginas mostrando, titulo, autor, editorial, paginas")
       console.table(mostrarLibrosPaginasGrandes)
       console.log("Method Sort")
+      console.log("Ordenar los libros por numero de paginas de mayor a menor")
       console.table(librosConMayorPaginas)
       console.log("Methods Encadenados")
+      console.log("array de libros caros por titulo mayores de 11 dolares, resumirlos por titulo, autor, precio. ")
       console.table(librosCarosTitulo)
+      console.log("resumen de libros que tengan menos de 100 paginas resumirlos por titulo, autor, editorial y paginas.")
       console.table(librosConMenosPaginas)
+      console.log("resumen de libros caros mayores a 20 dolares de mayor a menor resumirlos por titulo, autor, precio.")
       console.table(librosCarosMayoresDeMayoAMenor)
-
+      console.log("resumen de libros por numero mas alto de paginas resumirlos por titulo, autor, editorial, paginas ordenados de mayor a menor.")
+      console.table(librosPorNumeroMasAltoDePaginas)
+      return
     }
+
     
 
   do {
@@ -657,7 +679,7 @@ function mostrarMenu() {
         break;
     }
     if (continuar !== "no") {
-      continuar = prompt("Desea continuar (si/no)").toLowerCase();
+      continuar = prompt("Desea continuar o volver al menu (si/no)").toLowerCase();
     }
     }
     while (continuar === "si");
