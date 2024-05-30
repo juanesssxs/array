@@ -492,10 +492,35 @@ const nuevoLibro ={
   });
 
 //Method fliter
-  
-  const librosPrecioMayor = libros.map((libro) => {
+//Resumenes
+  const librosPrecioMayor = libros.filter((libro) => {
     return libro.precio > 50;
   });
+
+  const librosPaginasGrandes = libros.filter((libro) => {
+    return libro.paginas > 600;
+  });
+
+  const mostrarLibrosPaginasGrandes = libros.map ((libro) => {
+    return {
+        titulo: libro.titulo,
+        autor: libro.autor,
+        editorial: libro.editorial,
+        paginas: libro.paginas,
+    }
+  });
+
+  //method sort
+
+  const  librosConMayorPaginas = libros.sort(
+    (libroa, librob) => librob.paginas - libroa.paginas);
+
+//Methods encadenados
+
+const librosCarosTitulo = libros.filter((libro) => {
+  return libro.precio > 11; 
+})
+  .map((titulo))
  
 
 function mostrarMenu() {
@@ -553,6 +578,17 @@ function mostrarMenu() {
       return
     }
 
+    function mostrarResumenes() {
+      console.log("Methods Filter")
+      console.table(librosPrecioMayor)
+      console.table(mostrarLibrosPaginasGrandes)
+      console.log("Method Sort")
+      console.table(librosConMayorPaginas)
+      console.log("Methods Encadenados")
+
+    }
+    
+
   do {
     mostrarMenu();
     let opcion = prompt("Seleccione una opción:");
@@ -576,6 +612,9 @@ function mostrarMenu() {
         mostrarLibroConDescuento();
         break;
       case '7':
+        mostrarResumenes();
+        break;
+      case '8':
         continuar = "no";
         console.log("Saliendo del programa...");
         break;
