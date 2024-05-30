@@ -520,18 +520,49 @@ const nuevoLibro ={
 const librosCarosTitulo = libros.filter((libro) => {
   return libro.precio > 11; 
 })
-  .map((titulo))
+  .map((titulo) => {
+    return{
+      titulo: titulo.titulo,
+      autor: titulo.autor,
+      precio: titulo.precio,
+    }
+  });
  
+  const librosConMenosPaginas = libros.filter((libro) => {
+    return libro.paginas < 100; 
+  })
+    .map((paginas) => {
+      return{
+        titulo: paginas.titulo,
+        autor: paginas.autor,
+        editorial: paginas.editorial,
+        paginas: paginas.paginas,
+      }
+    });
+
+   const librosCarosMayoresDeMayoAMenor = libros.filter((libro) => {
+      return libro.precio > 20;
+   })
+    .map((titulo) => {
+      return {
+          titulo: titulo.titulo,
+          autor: titulo.autor,
+          precio: titulo.precio,
+      }
+    })
+    .sort((a,b) => b.precio - a.precio);
+
+    const librosPorNumeroMasAltoDePaginas = 
 
 function mostrarMenu() {
-    console.log("Seleccione una opción:");
     console.log("1. Mostrar la pila de libros");
     console.log("2. Añadir un libro a la pila de libros");
     console.log("3. Eliminar el último libro de la pila de libros");
     console.log("4. Mostrar la longitud de la pila de libros");
     console.log("5. Listar los libros");
     console.log("6. Listar libros con descuento");
-    console.log("7. Salir");
+    console.log("7. Mostrar Resumenes");
+    console.log("8. Salir");
     }
   
     function mostrarLibros(libros) {
@@ -548,7 +579,7 @@ function mostrarMenu() {
     if (libroQuitado) {
       console.log(`Libro eliminado: ${libroQuitado.titulo}`);
     } else {
-      console.log("No hay libros quer eliminar.");
+      console.log("No hay libros quer elimimnar");
     }
     }
   
@@ -585,6 +616,9 @@ function mostrarMenu() {
       console.log("Method Sort")
       console.table(librosConMayorPaginas)
       console.log("Methods Encadenados")
+      console.table(librosCarosTitulo)
+      console.table(librosConMenosPaginas)
+      console.table(librosCarosMayoresDeMayoAMenor)
 
     }
     
