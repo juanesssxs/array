@@ -6,6 +6,7 @@ let libros = [
     genero:"Ficcion",
     idioma:"Español",
     precio:15.000,
+    descuento:"20%",
     formato:"Tapa dura",
     isbn:"29788478888566",
     descripcion:"La historia de Ariel, una sirena que sueña con vivir en tierra firme.",
@@ -25,6 +26,7 @@ let libros = [
     genero: "Ficción",
     idioma: "Español",
     precio: 14.50,
+    descuento:"20%",
     formato: "Tapa dura",
     isbn: "9788444142579",
     descripcion: "La historia de Simba, un joven león que lucha por reclamar su lugar como rey de la selva.",
@@ -43,6 +45,7 @@ let libros = [
     genero: "Ficción",
     idioma: "Español",
     precio: 29.900,
+    descuento:"20%",
     formato: "Tapa blanda",
     isbn: "9781368002509",
     descripcion: "La historia de Olaf, el simpático muñeco de nieve, en una aventura congelada.",
@@ -56,21 +59,22 @@ let libros = [
 },
 {
 
-        titulo: "La Bella y la Bestia",
-        autor: "Gabrielle-Suzanne Barbot de Villeneuve",
-        genero: "Ficción",
-        idioma: "Español",
-        precio: 12.99,
-        formato: "Tapa dura",
-        isbn: "9781484781001",
-        descripcion: "La historia de Bella, una joven que se enamora de una bestia encantada.",
-        estado: "Nuevo",
-        ubicacion: "Paris, Francia",
-        fecha_publicacion: "Octubre 1756",
-        editorial: "Disney Press",
-        paginas: 72,
-        dimensiones: "8.5 x 0.5 x 11 pulgadas",
-        peso: "1.1 libras"
+    titulo: "La Bella y la Bestia",
+    autor: "Gabrielle-Suzanne Barbot de Villeneuve",
+    genero: "Ficción",
+    idioma: "Español",
+    precio: 12.99,
+    descuento:"20%",
+    formato: "Tapa dura",
+    isbn: "9781484781001",
+    descripcion: "La historia de Bella, una joven que se enamora de una bestia encantada.",
+    estado: "Nuevo",
+    ubicacion: "Paris, Francia",
+    fecha_publicacion: "Octubre 1756",
+    editorial: "Disney Press",
+    paginas: 72,
+    dimensiones: "8.5 x 0.5 x 11 pulgadas",
+    peso: "1.1 libras"
     
 },
  {
@@ -80,6 +84,7 @@ let libros = [
     genero: "Ficción",
     idioma: "Español",
     precio: 11.50,
+    descuento:"20%",
     formato: "Tapa dura",
     isbn: "9781484781018",
     descripcion: "La clásica historia de Blancanieves y su encuentro con los siete enanitos.",
@@ -98,6 +103,7 @@ let libros = [
     genero: "Aventura",
     idioma: "Español",
     precio: 8.99,
+    descuento:"20%",
     formato: "Tapa blanda",
     isbn: "9788416387983",
     descripcion: "Mickey y sus amigos se embarcan en una emocionante búsqueda de un tesoro escondido.",
@@ -116,6 +122,7 @@ let libros = [
     genero: "Ficción",
     idioma: "Español",
     precio: 7.99,
+    descuento:"20%",
     formato: "Tapa dura",
     isbn: "9788499518982",
     descripcion: "Buzz Lightyear se embarca en una misión para salvar a sus amigos y regresar a casa.",
@@ -134,6 +141,7 @@ let libros = [
     genero: "Ficción",
     idioma: "Español",
     precio: 9.50,
+    descuento:"20%",
     formato: "Tapa dura",
     isbn: "9788482983637",
     descripcion: "La historia de Cenicienta, una joven que encuentra su verdadero amor con la ayuda de un hada madrina.",
@@ -152,6 +160,7 @@ let libros = [
     genero: "Ficción",
     idioma: "Español",
     precio: 11.99,
+    descuento:"20%",
     formato: "Tapa dura",
     isbn: "9781484721626",
     descripcion: "La historia de Bambi, un cervatillo que enfrenta los desafíos de la vida en el bosque.",
@@ -170,6 +179,7 @@ let libros = [
     genero: "Ficción",
     idioma: "Español",
     precio: 13.99,
+    descuento:"20%",
     formato: "Tapa dura",
     isbn: "9788427920223",
     descripcion: "La historia de Peter Pan, el niño que nunca crece, y sus aventuras en el País de Nunca Jamás.",
@@ -188,6 +198,7 @@ let libros = [
     genero: "Ficción",
     idioma: "Español",
     precio: 11.50,
+    descuento:"20%",
     formato: "Tapa dura",
     isbn: "9788498018244",
     descripcion: "La historia de Blanca Nieves, una joven princesa perseguida por su malvada madrastra.",
@@ -205,6 +216,7 @@ let libros = [
     genero: "Ficción",
     idioma: "Español",
     precio: 13.99,
+    descuento:"20%",
     formato: "Tapa blanda",
     isbn: "9788499515151",
     descripcion: "La historia de los juguetes de Andy, que cobran vida cuando él no está mirando.",
@@ -222,6 +234,7 @@ let libros = [
     genero: "Ficción",
     idioma: "Español",
     precio: 12.75,
+    descuento:"20%",
     formato: "Tapa blanda",
     isbn: "9788427931069",
     descripcion: "La historia de Aladdín, un joven pobre que encuentra una lámpara mágica.",
@@ -239,6 +252,7 @@ let libros = [
     genero: "Ficción",
     idioma: "Español",
     precio: 10.99,
+    descuento:"20%",
     formato: "Tapa dura",
     isbn: "9780307591944",
     descripcion: "La historia de Cenicienta, una joven que es maltratada por su madrastra y hermanastras.",
@@ -256,6 +270,7 @@ let libros = [
     genero: "Ficción",
     idioma: "Español",
     precio: 11.99,
+    descuento:"20%",
     formato: "Tapa dura",
     isbn: "9788416917232",
     descripcion: "La historia de Moana, una joven que emprende un viaje para salvar a su isla.",
@@ -273,6 +288,7 @@ let libros = [
     genero: "Ficción",
     idioma: "Español",
     precio: 10.50,
+    descuento:"20%",
     formato: "Tapa blanda",
     isbn: "9788492691258",
     descripcion: "La historia de Pinocho, un muñeco de madera que desea convertirse en un niño real.",
@@ -290,6 +306,7 @@ let libros = [
     genero: "Ficción",
     idioma: "Español",
     precio: 11.25,
+    descuento:"20%",
     formato: "Tapa dura",
     isbn: "9788484608657",
     descripcion: "La historia de Peter Pan, un niño que nunca crece y su viaje a la Tierra de Nunca Jamás.",
@@ -307,6 +324,7 @@ let libros = [
     genero: "Ficción",
     idioma: "Español",
     precio: 10.99,
+    descuento:"20%",
     formato: "Tapa blanda",
     isbn: "9788499514284",
     descripcion: "La historia de Bambi, un joven ciervo que aprende sobre la vida en el bosque.",
@@ -324,6 +342,7 @@ let libros = [
     genero: "Ficción",
     idioma: "Español",
     precio: 12.75,
+    descuento:"20%",
     formato: "Tapa dura",
     isbn: "9780307592064",
     descripcion: "La historia de la princesa Aurora, quien cae en un sueño profundo por una maldición.",
@@ -341,6 +360,7 @@ let libros = [
     genero: "Ficción",
     idioma: "Español",
     precio: 11.99,
+    descuento:"20%",
     formato: "Tapa blanda",
     isbn: "9788416917218",
     descripcion: "La historia de Hércules, un semidiós que lucha por demostrar su valentía y convertirse en un héroe.",
@@ -360,6 +380,7 @@ const nuevoLibro ={
     genero: "Ficción",
     idioma: "Español",
     precio: 9.99,
+    descuento:20,
     formato: "Tapa blanda",
     isbn: "9788499514034",
     descripcion: "La emocionante historia de Simba, un joven león que lucha por reclamar su lugar como el legítimo Rey León de la sabana africana.",
@@ -371,6 +392,111 @@ const nuevoLibro ={
     dimensiones: "8.3 x 0.2 x 11.6 pulgadas",
     peso: "0.8 libras",
 }
+// Ejemplo method .map
+   const TITULO = libros.map((libro) => {
+    return {
+        titulo: libro.titulo,
+        autor: libro.autor,
+        precio: libro.precio,
+    };
+  });
+//10 iteraciones
+  const TITULO1 = libros.map((libro) => {
+    return {
+        titulo: libro.titulo,
+        autor: libro.autor,
+        precio: libro.precio,
+    };
+  });
+
+  const TITULO2 = libros.map((libro) => {
+    return {
+        titulo: libro.titulo,
+        genero: libro.genero,
+        idioma: libro.idioma,
+    };
+  });
+
+  const TITULO3 = libros.map((libro) => {
+    return {
+        titulo: libro.titulo,
+        formato: libro.formato,
+        isbn: libro.isbn,
+    };
+  });
+  
+
+  const TITULO4 = libros.map((libro) => {
+    return {
+        titulo: libro.titulo,
+        descripcion: libro.descripcion,
+        estado: libro.estado,
+    };
+  });
+
+  const TITULO5 = libros.map((libro) => {
+    return {
+        titulo: libro.titulo,
+        ubicacion: libro.ubicacion,
+        fecha_publicacion: libro.fecha_publicacion,
+    };
+  });
+
+  const TITULO6 = libros.map((libro) => {
+    return {
+        titulo: libro.titulo,
+        editorial: libro.editorial,
+        paginas: libro.paginas,
+    };
+  });
+
+  const TITULO7 = libros.map((libro) => {
+    return {
+        titulo: libro.titulo,
+        dimensiones: libro.dimensiones,
+        peso: libro.peso,
+    };
+  });
+
+  const TITULO8 = libros.map((libro) => {
+    return {
+        titulo: libro.titulo,
+        genero: libro.genero,
+        idioma: libro.idioma,
+    };
+  });
+
+  const TITULO9 = libros.map((libro) => {
+    return {
+        titulo: libro.titulo,
+        formato: libro.formato,
+        precio: libro.precio,
+    };
+  });
+
+  const TITULO10 = libros.map((libro) => {
+    return {
+        titulo: libro.titulo,
+        editorial: libro.editorial,
+        peso: libro.peso,
+    };
+  });
+
+//libros descuentos
+
+  const librosDescuentos = libros.map((libro) =>{
+    return {
+        ...libro,
+        descuento: 20,
+    };
+  });
+
+//Method fliter
+  
+  const librosPrecioMayor = libros.map((libro) => {
+    return libro.precio > 50;
+  });
+ 
 
 function mostrarMenu() {
     console.log("Seleccione una opción:");
@@ -378,7 +504,9 @@ function mostrarMenu() {
     console.log("2. Añadir un libro a la pila de libros");
     console.log("3. Eliminar el último libro de la pila de libros");
     console.log("4. Mostrar la longitud de la pila de libros");
-    console.log("5. Salir");
+    console.log("5. Listar los libros");
+    console.log("6. Listar libros con descuento");
+    console.log("7. Salir");
     }
   
     function mostrarLibros(libros) {
@@ -404,9 +532,30 @@ function mostrarMenu() {
     }
   
     let continuar = "si";
+    
+    function mostrarIteraciones() {
+      console.table(TITULO)
+      console.table(TITULO1)
+      console.table(TITULO2)
+      console.table(TITULO3)
+      console.table(TITULO4)
+      console.table(TITULO5)
+      console.table(TITULO6)
+      console.table(TITULO7)
+      console.table(TITULO8)
+      console.table(TITULO9)
+      console.table(TITULO10)
+      return
+    }
+
+    function mostrarLibroConDescuento() {
+      console.table(librosDescuentos)
+      return
+    }
+
   do {
     mostrarMenu();
-    var opcion = prompt("Seleccione una opción:");
+    let opcion = prompt("Seleccione una opción:");
     switch (opcion) {
       case '1':
         mostrarLibros(libros);
@@ -421,6 +570,12 @@ function mostrarMenu() {
         mostrarLongitud(libros);
         break;
       case '5':
+        mostrarIteraciones();
+        break;
+      case '6':
+        mostrarLibroConDescuento();
+        break;
+      case '7':
         continuar = "no";
         console.log("Saliendo del programa...");
         break;
@@ -431,7 +586,11 @@ function mostrarMenu() {
     if (continuar !== "no") {
       continuar = prompt("Desea continuar (si/no)").toLowerCase();
     }
-    } while (continuar === "si");
+    }
+    while (continuar === "si");
+
+
+
 
 
 
