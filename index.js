@@ -268,7 +268,7 @@ let libros = [
     titulo: "Moana",
     autor: "Walt Disney Company",
     genero: "Ficción",
-    idioma: "Español",
+    idioma: "Ingles",
     precio: 55.99,
     descuento:"20%",
     formato: "Tapa dura",
@@ -304,7 +304,7 @@ let libros = [
     titulo: "Peter Pan",
     autor: "J.M. Barrie",
     genero: "Ficción",
-    idioma: "Español",
+    idioma: "Ingles",
     precio: 11.25,
     descuento:"20%",
     formato: "Tapa dura",
@@ -378,7 +378,7 @@ const nuevoLibro ={
     titulo:"Frozen: Una Aventura Congelada",
     autor:"Walt Disney Company",
     genero: "Ficción",
-    idioma: "Español",
+    idioma: "Ingles",
     precio: 9.99,
     descuento:20,
     formato: "Tapa blanda",
@@ -565,6 +565,73 @@ const librosCarosTitulo = libros.filter((libro) => {
       })
       .sort((a,b) => b.paginas - a.paginas)
 
+// methods find
+
+const buscarLibroPortitulo = libros.find((libro) => {
+  return libro.titulo === "Frozen: Una aventura de Olaf";
+});
+
+const buscarLibroPorAutor = libros.find((libro) => {
+  return libro.autor === "Walt Disney Company";
+});
+
+const buscarLibroPorFechaPublicacion = libros.find((libro) => {
+  return libro.fecha_publicacion === "1923";
+});
+
+const buscarLibroPorGenero = libros.find((libro) => {
+  return libro.genero === "Ficción";
+});
+
+const buscarLibroPorIdioma = libros.find((libro) => {
+  return libro.idioma === "Español";
+});
+
+//10 itereaciones
+const buscarLibroPorPrecio = libros.find((libro) => {
+  return libro.precio === 25.99;
+});
+
+const buscarLibroPorDescripcion = libros.find((libro) => {
+  return libro.descripcion === "Buzz Lightyear se embarca en una misión para salvar a sus amigos y regresar a casa.";
+});
+
+const buscarLibroPorFormato = libros.find((libro) => {
+  return libro.formato === "Tapa blanda";
+});
+
+const buscarLibroPorIsbn = libros.find((libro) => {
+  return libro.isbn === "9788499514284"
+});
+
+const buscarLibroPorDescuento = libros.find((libro) => {
+  return libro.descuento === "20%";
+});
+
+const buscarLibroPorEstado = libros.find((libro) => {
+  return libro.estado === "Nuevo";
+});
+
+const buscarLibroPorUbicacion = libros.find((libro) => {
+  return libro.ubicacion === "Los Angeles, Estados Unidos";
+});
+
+const buscarLibroPorEditorial = libros.find((libro) => {
+  return libro.editorial === "Disney Press";
+});
+
+const buscarLibroPorPaginas = libros.find((libro) => {
+  return libro.paginas === 64;
+});
+
+const buscarLibroPorDimensiones = libros.find((libro) => {
+  return libro.dimensiones === "8.5 x 0.3 x 11 pulgadas";
+});
+
+const buscarLibroPorPeso = libros.find((libro) => {
+  return libro.peso === "1.2 libras";
+});
+
 function mostrarMenu() {
     console.log("1. Mostrar la pila de libros");
     console.log("2. Añadir un libro a la pila de libros");
@@ -573,7 +640,8 @@ function mostrarMenu() {
     console.log("5. Listar los libros");
     console.log("6. Listar libros con descuento");
     console.log("7. Mostrar Resumenes");
-    console.log("8. Salir");
+    console.log("8. Funcionalidades");
+    console.log("9. Salir");
     };
   
     function mostrarLibros(libros) {
@@ -622,6 +690,7 @@ function mostrarMenu() {
       return
     }
 
+
     function mostrarResumenes() {
       console.log("Methods Filter")
       console.log("Obtener un array con los libros que tengan un precio mayor a 50 dolares")
@@ -643,7 +712,30 @@ function mostrarMenu() {
       return
     }
 
-    
+    function MostrarFuncionalidades() {
+      console.log("Buscar un objeto del array por titulo.")
+      console.table(buscarLibroPortitulo)
+      console.log("Buscar un objeto del array por autor.")
+      console.table(buscarLibroPorAutor)
+      console.log("Buscar un objeto del array por fecha de publicación.")
+      console.table(buscarLibroPorFechaPublicacion)
+      console.log("Buscar un objeto del array por genero.")
+      console.table(buscarLibroPorGenero)
+      console.log("Buscar un objeto del array por idioma.")
+      console.table(buscarLibroPorIdioma)
+      console.log("10 iteraciones diferentes con find")
+      console.table(buscarLibroPorPrecio)
+      console.table(buscarLibroPorDescripcion)
+      console.table(buscarLibroPorFormato)
+      console.table(buscarLibroPorIsbn)
+      console.table(buscarLibroPorDescuento)
+      console.table(buscarLibroPorEstado)
+      console.table(buscarLibroPorUbicacion)
+      console.table(buscarLibroPorEditorial)
+      console.table(buscarLibroPorPaginas)
+      console.table(buscarLibroPorDimensiones)
+      return
+    }
 
   do {
     mostrarMenu();
@@ -671,6 +763,9 @@ function mostrarMenu() {
         mostrarResumenes();
         break;
       case '8':
+        MostrarFuncionalidades();
+        break;
+      case '9':
         continuar = "no";
         console.log("Saliendo del programa...");
         break;
