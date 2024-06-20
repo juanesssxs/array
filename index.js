@@ -633,15 +633,7 @@ const buscarLibroPorPeso = libros.find((libro) => {
 });
 
 function mostrarMenu() {
-    console.log("1. Mostrar la pila de libros");
-    console.log("2. Añadir un libro a la pila de libros");
-    console.log("3. Eliminar el último libro de la pila de libros");
-    console.log("4. Mostrar la longitud de la pila de libros");
-    console.log("5. Listar los libros");
-    console.log("6. Listar libros con descuento");
-    console.log("7. Mostrar Resumenes");
-    console.log("8. Funcionalidades");
-    console.log("9. Salir");
+    
     };
   
     function mostrarLibros(libros) {
@@ -739,7 +731,7 @@ function mostrarMenu() {
 
   do {
     mostrarMenu();
-    let opcion = prompt("Seleccione una opción:");
+    let opcion = prompt("Seleccione una opción: \n\n"+"1. Mostrar la pila de libros\n"+"2. Añadir un libro a la pila de libros\n"+"3. Eliminar el último libro de la pila de libros\n"+"4. Mostrar la longitud de la pila de libros\n"+"5. Listar los libros(Array Methods)\n"+"6. Listar libros con descuento(Array Methods + Spreed operator)\n"+ "7. Mostrar Resumenes(methods Filter(), sort(), encadenados)\n"+"8. Funcionalidades(Method find()\n"+"9. Salir");
     switch (opcion) {
       case '1':
         mostrarLibros(libros);
